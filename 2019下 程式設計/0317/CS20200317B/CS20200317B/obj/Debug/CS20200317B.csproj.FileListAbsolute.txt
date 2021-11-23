@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\CS20200317B\CS20200317B\bin\Debug\CS20200317B.exe.config
+C:\Users\Administrator\Desktop\CS20200317B\CS20200317B\bin\Debug\CS20200317B.exe
+C:\Users\Administrator\Desktop\CS20200317B\CS20200317B\bin\Debug\CS20200317B.pdb
+C:\Users\Administrator\Desktop\CS20200317B\CS20200317B\obj\Debug\CS20200317B.csprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\CS20200317B\CS20200317B\obj\Debug\CS20200317B.Form1.resources
+C:\Users\Administrator\Desktop\CS20200317B\CS20200317B\obj\Debug\CS20200317B.Properties.Resources.resources
+C:\Users\Administrator\Desktop\CS20200317B\CS20200317B\obj\Debug\CS20200317B.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\CS20200317B\CS20200317B\obj\Debug\CS20200317B.exe
+C:\Users\Administrator\Desktop\CS20200317B\CS20200317B\obj\Debug\CS20200317B.pdb

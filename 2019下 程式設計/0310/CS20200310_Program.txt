@@ -1,0 +1,105 @@
+
+            while (true)
+            {
+                try
+                {
+                    checked
+                    {
+                        Console.WriteLine("\n\n" + System.DateTime.Now);
+                        Console.Write("[A]Factorial(positive) [B]Fibonacci(++) [C]Prime Number [D]GCD[LCM] = [E]Prime Number between two Number = [F](X+Y)^3 \n");
+                        string[] Line = Console.ReadLine().Split(' ');
+                        if (Line[0] == "") break;
+                        string which = Line[0];
+                        int Number = int.Parse(Line[1]);
+                        //decimal F = 0; //long F = 0; int F=0;                      
+                        switch (which)
+                        {
+                            case "A":
+                              
+                                for (uint n = uint.Parse(Line[1]); n <= uint.Parse(Line[2]); n++)
+                                {
+                                    Console.WriteLine(n + "!= " + Factorial(n));                                    
+                                }
+                                break;
+
+                            case "B":
+                                //Fibonaccihttps://en.wikipedia.org/wiki/Fibonacci_number
+                                //Flow Charthttp://www.rff.com/fibonacci-numbers.htm
+                                
+                                for (uint i = uint.Parse(Line[1]); i <= uint.Parse(Line[2]); i++)
+                                {
+                                    if ( Fibonacci(i) % 2 == 0 ) Console.WriteLine("F" + i + "= " + Fibonacci(i) + "[案]");
+                                    else Console.WriteLine("F" + i + "= " + Fibonacci(i) + "()");
+                                }
+                                break;
+
+                            case "C":
+                                //Prime Numberhttps://en.wikipedia.org/wiki/Prime_number
+                                //Flow Chart http://www.rff.com/prime-numbers.htm
+                                //借计(计)https://zh.wikipedia.org/wiki/计
+                                //借计https://zh.wikipedia.org/wiki/借计
+                                decimal nth = 0;   //number of prime number
+                                decimal NN = 0;    //Natural Number
+                                //int Number = int.Parse(Line[1]);
+                                string result = null;
+                                double Start = DateTime.Now.TimeOfDay.TotalSeconds;
+                                while (nth < Number)
+                                {
+                                    if (PrimeYesNo(NN))
+                                    {
+                                        nth++;
+                                        //Console.WriteLine("P" + nth + "= " + NN);
+                                        result += "P" + nth + "= " + NN + "\n";
+                                    }
+                                    NN++;
+                                }
+                                Console.WriteLine(result);
+                                double Finish = DateTime.Now.TimeOfDay.TotalSeconds;
+                                Console.WriteLine("\n璸衡" + Number + "借计璸" + Math.Round(Finish - Start, 2) + "");
+                                break;
+
+                            case "D":
+                                decimal A = decimal.Parse(Line[1]);
+                                decimal B = decimal.Parse(Line[2]);
+
+                                Console.WriteLine("GCD(" + A + "," + B + ") = " + GCD(A, B));
+                                Console.WriteLine("LCM(" + A + "," + B + ") = " + LCM(A, B));
+
+                                break;
+
+                            case "E":
+                                decimal from = decimal.Parse(Line[1]);
+                                decimal to = decimal.Parse(Line[2]);
+                                decimal no = 0;
+                                for (decimal i = from; i <= to; i++)
+                                {
+                                    if (PrimeYesNo(i))
+                                    {
+                                        no++;
+                                        Console.WriteLine("P" + no + "= " + i);
+                                    }
+                                }
+                                break;
+
+                            case "F":
+                                decimal X = decimal.Parse(Line[1]);
+                                decimal Y = decimal.Parse(Line[2]);
+                                Console.WriteLine("CUBE(" + X + "+" + Y + ") = " + CUBE(X, Y));
+                                break;
+
+                            default:
+                                return; //break;
+                        }
+
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+                finally
+                {
+                    Console.WriteLine("Press <Eneter> key to Exit");
+                    Console.ReadKey();
+                }
+            }

@@ -1,0 +1,80 @@
+
+Factorial(uint n)
+{
+            decimal F;
+            if (n == 0) F = 1;
+            else
+            {
+                F = 1;
+                for (int i = 1; i <= n; i++)
+                {
+                    F = F * i; //F = F * i; F *= i;
+                }
+            }
+            return F;
+ }
+
+
+
+Fibonacci(uint N)
+{
+            if (N == 0) return 0;
+            else if (N == 1) return 1;
+            else
+            {
+                decimal F0 = 0;
+                decimal F1 = 1;
+                decimal Fn = 0;
+                int f = 2;
+                while (f <= N)
+                {
+                    Fn = F0 + F1;
+                    F0 = F1;
+                    F1 = Fn;
+                    f++; //f = f + 1;
+                }
+                return Fn;
+            }
+}
+
+PrimeYesNo(decimal N)
+{ 
+            if (N <= 1) return false;
+            else if (N == 2) return true;
+            else if (N % 2 == 0) return false;
+            else
+            {                
+                for (decimal i = 3; i <= (decimal)Math.Pow((double)N, 1.0 / 2.0); i += 2)
+                {
+                    if (N % i == 0) return false;
+                }
+                return true;
+            }
+}
+
+GCD(decimal A, decimal B)
+ {
+            if (A < 0) A = -A;
+            if (B < 0) B = -B;
+            decimal temp;
+      
+            while (A % B != 0)
+            {
+                temp = B;
+                B = A % B;
+                A = temp;
+            }
+            return B;
+}
+
+LCM(decimal A, decimal B)
+{
+            return Math.Abs(A * B) / GCD(A, B);
+}
+
+CUBE(decimal A, decimal B)
+ {
+            double SUM = (double)A + (double)B;
+            return (decimal)Math.Pow(SUM,3);
+ }
+        
